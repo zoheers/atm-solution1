@@ -17,17 +17,15 @@ class Atm:
         print "<===============================>"
         if   request > self.balance:
             print("Can't give you all this money !!")
-    
         elif request <= 0:
-
             print("More than zero plz!")
-    
         else:
             self.withdrawals_list.append(request)
             self.balance-=request
             self.process_request(request)
         print "the new balance = ", self.balance
         return self.balance
+    
     def process_request(self,request):
         while request > 0:
                  if request >= 100:
@@ -46,7 +44,7 @@ class Atm:
                     print("give " + str(request))
                     request = 0
 
-        
+      
 
 balance1 = 500
 balance2 = 4500
